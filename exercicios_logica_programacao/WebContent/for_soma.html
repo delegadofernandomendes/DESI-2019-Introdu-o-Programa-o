@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercício For - Soma</title>
+</head>
+<body>
+	<script>
+	var produtos = ['Pão(es)', 'Leite(s)', 'Café(s)'];
+	var precos = [1.2, 2.5, 3];
+	var quantidades = [2, 2, 2];
+	var totalCompra = 0;
+	var imposto = 4; 
+	
+	for (var i = 0; i<produtos.length; i++) {
+		var produto = produtos[i];
+		var qdade = quantidades[i];
+		var preco = precos[i];
+		var total = qdade * preco;
+		
+		totalCompra = totalCompra + total;
+		alert(qdade + ' ' + produto + ' => R$ ' + preco);
+	}
+	
+	
+	
+	var valor_imposto = totalCompra * 4 /100;
+	var valor_final = valor_imposto + totalCompra;
+	alert('O total de sua compra foi: R$  ' + totalCompra);
+	alert('O valor de sua compra com impostos é de R$ ' + valor_final + ',00');
+	</script>
+
+</body>
+</html>

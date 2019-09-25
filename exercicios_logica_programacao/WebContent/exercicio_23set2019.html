@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercício While - Soma</title>
+</head>
+<body>
+	<script>
+		var i = 0;
+		var numeros = [3, 8, 51, 22, 94, 5];
+		var soma = 0;
+		
+		while (i<numeros.length) {
+			if (numeros[i] % 2 == 0) {
+				soma = soma + numeros[i];
+				//soma+=numeros[i];
+				console.log(numeros[i]);
+				alert(numeros[i]);
+			}
+			i++;
+		}
+		console.log('Soma dos pares = ' + soma);
+		alert('Soma dos pares = ' + soma)
+	</script>
+</body>
+</html>

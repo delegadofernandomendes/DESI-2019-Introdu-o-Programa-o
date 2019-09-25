@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Atividade: Usando for para concular compras</title>
+</head>
+<body>
+	<script>
+	var produtos = ['Camisa(s)', 'Calça(s)', 'Tênis'];
+	var preco = [40, 60, 200];
+	var quantidade = [2, 1, 1];
+	var total_compra = 0;
+	
+	for (var i=0; i<produtos.length; i++) {
+		var prod = produtos[i];
+		var prc = preco[i];
+		var qdade = quantidade[i];
+		var soma = prc * qdade;
+		total_compra = total_compra + soma;
+		alert(qdade + ' ' + prod + ' => R$ ' + prc + ',00');
+	}
+	
+	alert('O valor total de sua compra foi de R$ ' + total_compra);
+	
+	//Crie um array com os produtos: camisa, calça e tênis. Os respectivos preços são: 40 reais, 60 reais e 200 reais.
+	//O consumidor comprou 2 camisetas, 1 calça e 1 tênis.
+	//Calcule e exiba o total pago por cada produto comprado e o total final da compra.
+	
+	</script>
+</body>
+</html>
