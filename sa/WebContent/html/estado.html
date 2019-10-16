@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Estados</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body onload="javascript:carregarDados()">
+<script src="../js/sa.js"></script>
+<div class="conteiner">
+<header>
+<div id="busca-logo">
+<div id="logo">
+<img src="../img/logo_sa.jpg" />
+</div>
+<div id="busca"></div>
+</div>
+<div id="menu">
+<nav id="menu-superior">
+<ul>
+<li><a href="">Cadastro de Estados</a>
+<li><a href="">Cadastro de Cidades</a>
+<li><a href="">Cadastro de Cliente</a>
+<li><a href="">Pesquisa de Clientes</a>
+<li><a href="">Relatórios</a>
+<li><a href="">Cadastro de Usuarios</a>
+<li><a href="">Ajuda</a>
+</ul>
+</nav>
+</div>
+
+</header>
+</div>
+<h1>Cadastro de Estados</h1>
+
+<form>
+<div>
+<label for="nome_estado">Nome: </label> <input type="text"
+id="nome_estado" placeholder="Nome do Estado" required />
+</div>
+<div>
+<label for="nome_pais">País: </label> <input type="text"
+id="nome_pais" placeholder="Nome do País" disabled />
+
+
+</div>
+<div class="div-button">
+<button onclick="salvarEstado()">Salvar</button>
+</div>
+</form>
+
+</body>
+</html>
