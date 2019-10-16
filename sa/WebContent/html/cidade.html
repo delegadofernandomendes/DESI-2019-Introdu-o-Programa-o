@@ -1,11 +1,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Estados</title>
+<title>Cidade</title>
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
-<body onload="javascript:carregarDados()">
-<script src="../js/sa.js"></script>
+<body onload="carregarDadoscidade()">
+<script src="../js/cidade.js"></script>
 <div class="conteiner">
 <header>
 <div id="busca-logo">
@@ -30,21 +30,22 @@
 
 </header>
 </div>
-<h1>Cadastro de Estados</h1>
+<h1>Cadastro de Cidades</h1>
 
 <form>
 <div>
-<label for="nome_estado">Nome: </label> <input type="text"
-id="nome_estado" placeholder="Nome do Estado" required />
+<label for="nome_cidade">Nome: </label> <input type="text"
+id="nome_cidade" placeholder="Nome da Cidade" required />
 </div>
 <div>
-<label for="nome_pais">País: </label> <input type="text"
-id="nome_pais" placeholder="Nome do País" disabled />
-
+<label for="nome_estado">Estado: </label> 
+<select id="comboEstado">
+	<option value="">Selecione</option>
+</select>
 
 </div>
 <div class="div-button">
-<button onclick="salvarEstado()">Salvar</button>
+<button onclick="salvarCidade()">Salvar</button>
 </div>
 </form>
 
