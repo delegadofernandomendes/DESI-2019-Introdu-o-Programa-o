@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Estados</title>
+<title>Clientes</title>
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body onload="javascript:carregarDados()">
@@ -13,26 +13,28 @@
 <div id="logo">
 <img src="../img/logo_sa.jpg" />
 </div>
-<div id="busca"></div>
-</div>
 
 </header>
 </div>
-<h1>Cadastro de Estados</h1>
+<h1>Cadastro de Clientes</h1>
 
-<form id="form1" method="post" action="">
-<div>
-<label for="nome_estado">Nome: </label> <input type="text"
-id="nome_estado" placeholder="Nome do Estado" />
+<form id="formCadClientes" method="post" action="">
 
-</div>
 <div>
-<label for="nome_pais">País: </label> <input type="text"
-id="nome_pais" placeholder="Nome do País" disabled />
+<label for="nome_cliente">Nome: </label> <input type="text"
+id="nome_cliente" placeholder="digite no nome do cliente" />
 </div>
+
+<div>
+<label for="cpf_cliente">CPF: </label> <input type="text"
+id="cpf_cliente" placeholder="CPF do cliente" disabled />
+</div>
+
+
+
 
 <div class="div-button">
-<button onclick="salvarEstado()">Salvar</button>
+<button onclick="salvarCliente()">Salvar</button>
 <button onclick="abrirPagina('../index.html')">Voltar</button>
 </div>
 </form>
