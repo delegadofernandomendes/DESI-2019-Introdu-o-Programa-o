@@ -15,28 +15,45 @@
 </div>
 <div id="busca"></div>
 </div>
+<div id="menu">
+<nav id="menu-superior">
+<ul>
+<li><a href="estado.html">Cadastro de Estados</a>
+<li><a href="cidade.html"">Cadastro de Cidades</a>
+<li><a href="">Cadastro de Cliente</a>
+<li><a href="">Pesquisa de Clientes</a>
+<li><a href="">Relatórios</a>
+<li><a href="">Cadastro de Usuarios</a>
+<li><a href="">Ajuda</a>
+</ul>
+</nav>
+</div>
 
 </header>
 </div>
 <h1>Cadastro de Estados</h1>
 
-<form id="form1" method="post" action="">
+<form>
 <div>
 <label for="nome_estado">Nome: </label> <input type="text"
-id="nome_estado" placeholder="Nome do Estado" />
-
+id="nome_estado" placeholder="Nome do Estado" required />
 </div>
 <div>
 <label for="nome_pais">País: </label> <input type="text"
 id="nome_pais" placeholder="Nome do País" disabled />
-</div>
 
+
+</div>
 <div class="div-button">
 <button onclick="salvarEstado()">Salvar</button>
-<button onclick="abrirPagina('../index.html')">Voltar</button>
 </div>
 </form>
+        
+<div class="div-button">
+<button onclick="voltarInicial()">Voltar</button>
+</div>
 
+</div>
 
 </body>
 </html>
