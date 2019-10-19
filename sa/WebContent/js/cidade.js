@@ -3,11 +3,14 @@ function carregarDadoscidade() {
 	
 	let listaEstadosStr = localStorage.getItem('listaEstado');
 	let listaEstados = [];
+	
 	if (listaEstadosStr != null) {
 		listaEstados = JSON.parse(listaEstadosStr);
 	}
+
 	let comboEstado = document.getElementById("comboEstado");
 	let option;
+
 	for (let index = 0; index < listaEstados.length; index++) {
 		option = document.createElement("option");
 		option.text = listaEstados[index].nome;
@@ -37,5 +40,9 @@ function salvarCidade(){
 	
 	let cidadeStr = JSON.stringify(cidade);
 	localStorage.setItem('Cidade', cidadeStr);
+
+	alert('Cidade salva com sucesso');
+
+	abrirPagina('../index.html');
 
 }

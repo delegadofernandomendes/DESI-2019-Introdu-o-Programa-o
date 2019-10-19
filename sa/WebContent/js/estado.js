@@ -1,16 +1,16 @@
-function carregarDados(){
-const pais = 'Brasil'
-document.getElementById('nome_pais').value = pais;
+function carregarDados() {
+
+	const pais = 'Brasil'
+	document.getElementById('nome_pais').value = pais;
 }
 
 //construtor para Estado
-function Estado(nome, pais){
-this.nome = nome;
-this.pais = pais;
-
+function Estado(nome, pais) {
+	this.nome = nome;
+	this.pais = pais;
 }
 
-function salvarEstado(){
+function salvarEstado() {
 	//Pegar o elemento HTML com id "nome" e guardar em input
 	let input = document.getElementById('nome_estado');
 	//Pegar o valor de dentro do input , ou seja, o que o usario digitou
@@ -22,16 +22,15 @@ function salvarEstado(){
 	let pais = input.value;
 	//usa o construtor Estado para criar o objeto estado
 	let estado = new Estado(nome, pais);
-	
-	
 	// pega o item do local storage
-	let listEstadoStr = localStorage.getItem('listaEstado');
+	let listEstadoStr = localStorage.getItem('listaEstado');	
 	//iniciliza a lista vazia
-	let listEstado = [];
-	
-	
+	let listEstado;
 	//verificar se a string no local storage nao é null
-	if(listEstadoStr !=null){
+	
+	if(listEstadoStr == null){
+		listEstado = [];
+	} else {
 		listEstado = JSON.parse(listEstadoStr);
 	}
 	
@@ -43,5 +42,4 @@ function salvarEstado(){
 	localStorage.setItem('listaEstado', listEstadoStr);
 	
 	//salva o objeto estado no local storage
-
 }
