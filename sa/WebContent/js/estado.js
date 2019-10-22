@@ -38,8 +38,11 @@ function salvarEstado() {
 	listEstado.push(estado);
 	
 	listEstadoStr = JSON.stringify(listEstado);
-	
-	localStorage.setItem('listaEstado', listEstadoStr);
-	
+
 	//salva o objeto estado no local storage
+	localStorage.setItem('listaEstado', listEstadoStr);
+
+	alert('Estado salvo com sucesso');
+
+	abrirPagina('../index.html');
 }
