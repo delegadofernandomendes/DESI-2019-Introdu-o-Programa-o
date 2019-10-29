@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Busca de produtos</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        let produtos = ['iPhone 11', 'Motorola one', 'Samsung S10', 'Xiaomi MI9', 'iPhone 8'];
+        
+        let pesquisa = prompt('Informe o produto desejado');
+
+        let produtoEncontrado = false;
+
+        // Gravando os produtos no localStorage
+
+        // JSON é uma linguagem que permite que plataformas distintas troquem dados entre si.
+
+        // JSON.Stringify -> Função que transforma o objeto array em JSON;
+        
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+
+        // JSON.parse -> Função que transforma JSON de volta em objeto array
+
+        let produtosCadastrados = JSON.parse(localStorage.getItem('produtos'));
+
+        for (let i=0; i<produtos.length; i++) {
+            
+            let busca = pesquisa.toLowerCase();
+            let produto = produtosCadastrados[i].toLowerCase();
+
+            if (produto.search(busca) != -1) {
+                console.log(produtosCadastrados[i]+' no índice '+i);
+                alert('Produto encontrado na base de dados: '+produtos[i]);
+                produtoEncontrado = true;
+            }
+        }
+
+        if (!produtoEncontrado) {
+                alert('Nenhum produto encontrado');
+            }
+
+        //for (let i=0; i<produtos.length; i++) {
+            //if (pesquisa.toLowerCase() === produtos[i].toLowerCase()) {
+                //produtoEncontrado = true;
+                //console.log(produtos[i]+' no índice '+i);
+                //alert('Produto encontrado na base de dados: '+produtos[i]);
+
+        //if (!produtoEncontrado) {
+            //alert('Nenhum produto encontrado');
+        //}
+
+    </script>
+    
+</body>
+</html>
