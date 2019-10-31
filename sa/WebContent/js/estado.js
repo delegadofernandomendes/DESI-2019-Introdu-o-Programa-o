@@ -1,5 +1,4 @@
 function carregarDados() {
-
 	const pais = 'Brasil'
 	document.getElementById('nome_pais').value = pais;
 }
@@ -45,4 +44,9 @@ function salvarEstado() {
 	alert('Estado salvo com sucesso');
 
 	abrirPagina('../index.html');
+
 }
+
+// Comentário em html: <!-- -->
+
+// Comentário em css: /* */

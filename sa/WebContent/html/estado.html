@@ -7,8 +7,8 @@
 </head>
 
 <body onload="javascript:carregarDados()">
-    <script src="../js/estado.js"></script>
     <script src="../js/voltar.js"></script>
+    <script src="../js/estado.js"></script>
 
     <style>
 
@@ -91,6 +91,10 @@
                 /*background-color: gray;*/ 
                 background-color:#C8C8C8;     
             }
+
+            .separador {
+                margin: 70px auto;
+            }
         
         </style>
 
@@ -106,7 +110,7 @@
                     <div id="busca"></div>
                 </div>
     
-                <div id="menu">
+                <!--<div id="menu">
                         <nav id="menu-superior">
                             <ul>
                                 <li><a href="estado.html">Cadastro de Estados</a>
@@ -118,31 +122,35 @@
                                 <li><a href="">Ajuda</a>						
                             </ul>
                         </nav>
-                </div>
+                </div>-->
     
             </header>
         </div>
 
-    <h1>Cadastro de Estados</h1>
+    <div id="content" class="separador">
+       
+        <h1>Cadastro de Estados</h1>
 
-    <form>
-        
-        <div>
-            <label for="nome_estado">Nome: </label> 
-            <input type="text" id="nome_estado" placeholder="Nome do Estado" value="" required />
-        </div>
+        <form action="javascript:void(0)">
+            
+            <div>
+                <label for="nome_estado">Nome: </label> 
+                <input type="text" id="nome_estado" placeholder="Nome do Estado" value="" required />
+            </div>
+    
+            <div>
+                <label for="nome_pais">País: </label> 
+                <input type="text" id="nome_pais" placeholder="Nome do País" value="" disabled />
+            </div>
+    
+            <div class="div-button">
+                <button onclick="salvarEstado()">Salvar</button>
+                <button onclick="abrirPagina('../index.html')">Voltar</button>
+            </div>
+    
+        </form>
 
-        <div>
-            <label for="nome_pais">País: </label> 
-            <input type="text" id="nome_pais" placeholder="Nome do País" value="" disabled />
-        </div>
-
-        <div class="div-button">
-            <button onclick="salvarEstado()">Salvar</button>
-            <button onclick="abrirPagina('../index.html')">Voltar</button>
-        </div>
-
-    </form>
+    </div>   
 
 </body>
 

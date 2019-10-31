@@ -7,8 +7,97 @@
 </head>
 
 <body onload="carregarDadoscidade()">
-	<script src="../js/cidade.js"></script>
 	<script src="../js/voltar.js"></script>
+	<script src="../js/cidade.js"></script>
+
+	<style>
+
+            body {
+                margin: 0x;
+                padding: 0px;
+                font-family: "MuseoSans", Arial, sans-serif;
+            }
+    
+            .container {
+                margin: 0px;
+                padding: 0px;
+                background-color: white;
+            }
+    
+            ul {
+                margin: 10px;
+                padding: 10px;
+                list-style: none;
+            }
+    
+            ul li {
+                display: inline;	
+            }
+    
+            #busca-logo {
+                margin: 5px 0px;
+                background-color:#C8C8C8;
+                text-align: center;
+    
+            }
+    
+            #menu-superior {
+                text-align: center;
+                border-top: 1px solid grey;
+                border-bottom: 1px solid grey;
+                background-color:white;
+            }
+    
+            a {
+                margin:15px;
+                color: grey;
+                text-decoration: none;	
+            }
+    
+            #menu-superior li {	
+                padding:1px;
+            }
+    
+            #menu-superior li:last-child {
+                border-right: none;
+            }
+    
+            p.um {
+                font-size:10px;
+            }
+    
+            #menu-superior li {
+                border-right: 1px solid grey;
+            }
+    
+            a {
+                color: #000;
+                font-weight: bold /* negrito no texto */
+            }
+    
+            a:link, a:visited, a:active {
+                text-decoration: none;
+            }
+    
+            a:hover {text-decoration: underline;  
+                color:	#3CB371; 
+                font-size:150%; 
+            }
+    
+            .container {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                /*background-color: gray;*/ 
+                background-color:#C8C8C8;     
+            }
+
+            .separador {
+                margin: 30px;
+                padding: 30px;
+            }
+        
+        </style>
 
 	<div class="conteiner">
 
@@ -22,45 +111,33 @@
                 <div id="busca"></div>
             </div>
     
-            <div id="menu">
-                    <nav id="menu-superior">
-                        <ul>
-                            <li><a href="estado.html">Cadastro de Estados</a>
-                            <li><a href="cidade.html">Cadastro de Cidades</a>
-                            <li><a href="">Cadastro de Cliente</a>
-                            <li><a href="">Pesquisa de Clientes</a>
-                            <li><a href="">Relatórios</a>
-                            <li><a href="">Cadastro de Usuarios</a>
-                            <li><a href="">Ajuda</a>						
-                        </ul>
-                    </nav>
-			</div>
+            
         </header>
-    </div>
+	</div>
 	
-	<h1>Cadastro de Cidades</h1>
-
-	<form action="javascript:void(0)">
-		<div>
-			<label for="nome_cidade">Nome: </label> 
-			<input type="text" id="nome_cidade" placeholder="Nome da Cidade" value="" />
-		</div>
-
-		<div>
-			<label for="nome_estado">Estado: </label> 
-			<select id="comboEstado">
-				<option value="">Selecione</option>
-			</select>
-				
+	<div id="content" class="separador">
 	
-		</div>
+		<h1>Cadastro de Cidades</h1>
 
-		<div class="div-button">
-			<button onclick="salvarCidade()">Salvar</button>
-			<button onclick="abrirPagina('../index.html')">Voltar</button>
-		</div>
+		<form action="javascript:void(0)">
+			<div>
+				<label for="nome_cidade">Nome: </label> 
+				<input type="text" id="nome_cidade" placeholder="Nome da Cidade" value="" />
+			</div>
 
-	</form>
+			<div>
+				<label for="nome_estado">Estado: </label> 
+				<select id="comboEstado">
+					<option value="">Selecione</option>
+				</select>
+			</div>
+
+			<div class="div-button">
+				<button onclick="salvarCidade()">Salvar</button>
+				<button onclick="abrirPagina('../index.html')">Voltar</button>
+			</div>
+
+		</form>
 
 </body>
 
