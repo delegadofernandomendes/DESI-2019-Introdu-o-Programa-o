@@ -25,7 +25,7 @@ function salvarEstado() {
 	let listEstadoStr = localStorage.getItem('listaEstado');	
 	//iniciliza a lista vazia
 	let listEstado;
-	//verificar se a string no local storage nao é null
+	//verificar se a string no local storage nao é nulls
 	
 	if(listEstadoStr == null){
 		listEstado = [];
