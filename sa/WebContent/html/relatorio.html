@@ -1,82 +1,173 @@
 <html>
 
-<head> 
-    <script src="../js/relatorio.js"></script>
-    <meta charset="UTF-8">
-    <title>Relatório</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <div>
+    <head> 
+        <script src="../js/relatorio.js"></script>
+        <meta charset="UTF-8">
+        <title>Relatório</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">       
+    </head>
 
-    <header>
-        <div id="busca-logo">
-        <div id="logo">
-            <img src="../img/oi2.png" />
-        </div>
-        <div id="busca"></div>
-        </div>  
-    </header>
-</div>
+    <style>
 
-<style>
+        body {
+            margin: 0x;
+            padding: 0px;
+            font-family: "MuseoSans", Arial, sans-serif;
+        }
 
-    H1 { text-align: center }
+        .container {
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+        }
 
-    #table-relatorio{
-    width:100%
-    }
+        ul {
+            margin: 10px;
+            padding: 10px;
+            list-style: none;
+        }
 
+        ul li {
+            display: inline;	
+        }
 
-    #table-relatorio th{
-    background: red;
-    color: white;
-    line-height: 30px;
-   }
+        #busca-logo {
+            margin: 5px 0px;
+            background-color:#C8C8C8;
+            text-align: center;
+        }
 
-    #table-relatorio tr:nth-child(even) td{
-    background-color: yellow;
-    }
+        #menu-superior {
+            text-align: center;
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+            background-color:white;
+        }
 
-    #table-relatorio tr:nth-child(odd) td{
-    background-color: yellow;
-    }
+        a {
+            margin:15px;
+            color: grey;
+            text-decoration: none;	
+        }
 
-    #table-relatorio td{
-    padding: 0px;
-    margin: 0px;
-    border-top: 1px solid black;
-    text-align: center;
-    line-height: 30px;
-    }
-   
-</style>
+        #menu-superior li {	
+            padding:1px;
+        }
 
-</head>
+        #menu-superior li:last-child {
+            border-right: none;
+        }
 
-<body onload="javascript:carregarClientes()">
+        p.um {
+            font-size:10px;
+        }
 
-<body>
+        #menu-superior li {
+            border-right: 1px solid grey;
+        }
 
-    <h1>Relatório</h1>
+        a {
+            color: #000;
+            font-weight: bold /* negrito no texto */
+        }
 
-    <table id= "table-relatorio" border="0" cellspacing="0" cellpadding="0">
+        a:link, a:visited, a:active {
+            text-decoration: none;
+        }
 
-    <tr>
-        <th>Nome Completo</th>  
-        <th>Data de Nascimento</th>
-        <th>CPF</th>
-        <th>RG</th>
-        <th>Sexo</th>
-        <th>Endereço</th>
-        <th>CEP</th>
-        <th>Número</th>
-        <th>Complemento</th>
-        <th>Telefone</th>
-        <th>Celular</th>
-        <th>E-mail</th>
-    </tr>
+        a:hover {text-decoration: underline;  
+            color:	#3CB371; 
+            font-size:150%; 
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /*background-color: gray;*/ 
+            background-color:#C8C8C8;     
+        }
+
+        .separador {
+            margin: 120px auto;
+        }
+
+    </style>
+
+    <style>
+
+        H1 { 
+        text-align: center;
+        color: green; 
+        }
+
+        #table-relatorio{
+        width:100%
+        }
+
+        #table-relatorio th{
+        background-color:#C8C8C8;
+        color: green;
+        line-height: 30px;
+        }
+
+        #table-relatorio tr:nth-child(even) td{
+        background-color: yellow;
+        }
+
+        #table-relatorio tr:nth-child(odd) td{
+        background-color: yellow;
+        }
+
+        #table-relatorio td{
+        padding: 0px;
+        margin: 0px;
+        border-top: 1px solid black;
+        text-align: center;
+        line-height: 30px;
+        }
+
+    </style>
+
+    </head>
+
+    <body onload="javascript:carregarClientes()">
+
+    <body>
+
+        <div class="conteiner">
+
+            <header>
+        
+                <div id="busca-logo">
+                    <div id="logo">
+                        <img src="../img/oi2.png"/>
+                    </div>
+        
+                <div id="busca"></div>
+
+            </header>
+
+            <h1>Relatório</h1>
+
+            <table id= "table-relatorio" border="0" cellspacing="0" cellpadding="0">
+
+                <tr>
+                    <th>Nome Completo</th>  
+                    <th>Data de Nascimento</th>
+                    <th>CPF</th>
+                    <th>RG</th>
+                    <th>Sexo</th>
+                    <th>Endereço</th>
+                    <th>CEP</th>
+                    <th>Número</th>
+                    <th>Complemento</th>
+                    <th>Telefone</th>
+                    <th>Celular</th>
+                    <th>E-mail</th>
+                </tr>
  
-    </table>
+            </table>    
+    </body>
 
-</body>
-
-</html>
+    </html>
