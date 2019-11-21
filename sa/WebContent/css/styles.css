@@ -63,3 +63,52 @@ H1 { text-align: center }
 
 /************ MENU **********/
 
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "MuseoSans", Arial, sans-serif;
+    background-color:#c8c8c8;
+    
+    }
+    
+.container {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    }
+    
+ul {
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    color:#c8c8c8;
+    
+    }
+    
+ul li {
+    display: inline;
+    background-color: black;
+    color:#c8c8c8;
+    }
+    
+#busca-logo{
+    margin: 0px 0px;
+    background-color: #c8c8c8;
+    left: 100%;
+    text-align: center
+    }
+    
+#menu-superior {
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #c8c8c8;
+    }
+
+a {
+    margin:15px;
+    color: #c8c8c8;
+    text-decoration: none;
+    }
+    
+

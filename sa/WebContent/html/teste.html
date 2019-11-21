@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="favicon.ico" >
+<head>
+        <meta charset="utf-8">
+        <script src="javascript.js" charset="utf-8"></script>
+ <title></title>
+ <script language="Javascript">
+
+	</script>
+ <style>
+
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
+ .menu {
+  width: 100%;
+  height: 50px;
+  background: #FA8258;
+  font-family: 'Times New Roman';
+ }
+
+ .menu ul {
+  list-style: none;
+  position: relative;
+ }
+
+ .menu ul li {
+  width: 150px;
+  /*background: tomato;*/
+  float: left;
+ }
+
+ .menu a {
+  background-color: #FA8258;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(2, 2, 2);
+ }
+
+ .menu a:hover {
+  background-color:#FA8258;
+  color: #fff;
+ }
+
+ .menu ul ul {
+  position: absolute;
+  visibility: hidden;
+ }
+
+ .menu ul li:hover ul {
+  visibility: visible;
+ }
+
+ .menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #ADD8E6;
+ }
+
+ .menu ul ul li a {
+  background-color: #FA8258;
+ }
+
+ label[for="bt_menu"] {
+  padding: 5px;
+  background-color: #FA8258;
+  color:#fff;
+  font-family: 'Arial';
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+ }
+
+ #bt_menu {
+  display: none;
+ }
+
+ @media (max-width: 800px) {
+  label[for="bt_menu"] {
+   display: block;
+  }
+
+  #bt_menu:checked ~ .menu {
+   margin-left: 0;
+  }
+
+  .menu {
+   margin-top: 5px;
+   margin-left: -100%;
+   transition: all .4s;
+  }
+
+  .menu ul li {
+   width: 100%;
+   float: none;
+  }
+  .menu ul ul {
+   position: static;
+   overflow: hidden;
+   max-height: 0;
+   transition: all .8s;
+  }
+  .menu ul li:hover ul {
+   height: auto;
+   max-height: 200px;
+  }
+ }
+
+ button.css3button {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+color: #ffffff;
+padding: 10px 20px;
+background: -webkit-gradient(
+ linear, left top, left bottom,
+ from(#ff7442),
+ to(#ff7442));
+background: linear-gradient(
+ top,
+ #ff7442 0%,
+ #ff7442);
+border-radius: 10px;
+border: 3px solid #ffffff;
+box-shadow:
+ 0px 1px 3px rgba(000,000,000,0.5),
+ inset 0px 0px 3px rgba(255,252,253,1);
+text-shadow:
+ 0px -1px 0px rgba(000,000,000,0.1),
+ 0px 1px 0px rgba(255,255,255,1);
+}
+
+ </style>
+
+</head>
+<body>
+
+ <input type="checkbox" id="bt_menu">
+ <label for="bt_menu">&#9776;</label>
+
+ <nav class="menu">
+  <ul>
+   <li><a href="home.html">Talking Hands</a></li>
+  </ul>
+  
+ </nav>
+
+
+
+<center>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr0S9t0SGiSEV2-naYf4diiYUvUc2BAC0BZbMpbrPqVkw9NGwA" alt="" width="" class="img1">
+</center>
+<center>
+<button type="button" name="" value="" class="css3button">Novo Jogo</button>
+</center>
+
+
+<img src="http://1.bp.blogspot.com/-fUGuEVyBcEE/XKPIss91rTI/AAAAAAAAAlA/HXk3eWuw6qAS_W6O-6_BZMmy7vDPPeKOwCK4BGAYYCw/s1600/maos-horizontal1.png" alt="" height="365px" width="1300px">
+</body>
+</html>

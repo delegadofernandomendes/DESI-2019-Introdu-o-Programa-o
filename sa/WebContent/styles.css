@@ -1,0 +1,157 @@
+    body{
+   background-image: url(whatsApp Image.jpeg);
+    }
+    body h1{
+   font-family:'Roboto slab', serif;
+   color:#000000;
+}
+
+    body h2{
+   font-family: 'Merriweather', serif;
+   color:#BEBEBE;
+    }
+    body h3{
+   font-family:'Roboto Slab', serif;
+   color:#000000;
+    }
+    body h4{
+   font-family:'Merriweather', serif;
+   color:#BEBEBE;
+    }
+ 
+ * {
+    margin: 0;
+    padding: 0;
+   }
+  
+   .menu {
+    width: 100%;
+    height: 50px;
+    background:#008B8B;
+    font-family: "IMPACT";
+   }
+  
+   .menu ul {
+    list-style: none;
+    position: relative;
+   }
+  
+   .menu ul li {
+    width: 150px;
+    //background: tomato;
+    float: right;
+   }
+  
+   .menu a {
+    background-color:#00868B;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(2, 2, 2);
+   }
+  
+   .menu a:hover {
+    background-color:#6495ED;
+    color: #fff;
+   }
+  
+   .menu ul ul {
+    position: absolute;
+    visibility: hidden;
+   }
+  
+   .menu ul li:hover ul {
+    visibility: visible;
+   }
+  
+   .menu ul ul li {
+    float: none;
+    border-bottom: solid 1px #ADD8E6;
+   }
+  
+   .menu ul ul li a {
+    background-color: #ADD8E6; 
+   }
+  
+   label[for="bt_menu"] {
+    padding: 5px;
+    background-color: #ADD8E6;
+    color:#fff;
+    font-family: "impact";
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: none;
+   }
+  
+   #bt_menu {
+    display: none;
+   }
+  
+   @media (max-width: 800px) {
+    label[for="bt_menu"] {
+     display: block;
+    }
+  
+    #bt_menu:checked ~ .menu {
+     margin-left: 0;
+    }
+  
+    .menu {
+     margin-top: 5px;
+     margin-left: -100%;
+     transition: all .4s;
+    }
+  
+    .menu ul li {
+     width: 100%;
+     float: none;
+    }
+    .menu ul ul {
+     position: static;
+     overflow: hidden;
+     max-height: 0;
+     transition: all .8s;
+    }
+    .menu ul li:hover ul {
+     height: auto;
+     max-height: 200px;
+    }
+    section{
+        width:1025px;
+        height:150px;
+    }
+    .rede{
+        width:150px;
+        height: 150px;
+        float: left;
+        transition: all 0.4s ease-out;
+        border-radius: 50%;
+
+    }
+    .rede:hover{
+        cursor: pointer;
+        transform: translateY(-20px);
+        box-shadow:4px 30px 16px 0px rgba(50,50,50,0.45);
+    }
+    .rede#facebook{
+        background-color: #2372a3;
+    }
+    .rede#e-mail{
+        background-color:#FF0000 ;
+    }
+    .rede#instagram{
+        background-color:#3f729b;
+    }
+    .rede#youtube{
+        background-color:#CD0000 ;
+    }
+    .rede#snap{
+        background-color:#fc0;
+    }
+    .rede#twitter{
+        background-color:#0084b4 ;
+    }
