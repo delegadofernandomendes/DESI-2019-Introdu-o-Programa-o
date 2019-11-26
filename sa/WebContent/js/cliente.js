@@ -59,7 +59,7 @@ function salvarCliente() {
     let listCliente = [];
     if (ListClienteStr !=null) {
     listCliente = JSON.parse(ListClienteStr);
-}
+    }
     
     let encontrei = false;
    
@@ -82,7 +82,7 @@ function salvarCliente() {
     }
     
     if(encontrei) {
-    alert('Cliente já cadastrado! ');
+    alert('Cliente já cadastrado!');
     return false;
     }
     
@@ -91,7 +91,7 @@ function salvarCliente() {
     let listClienteStr = JSON.stringify(listCliente);
     
     localStorage.setItem('listaCliente', listClienteStr);
-    alert('Dados Cadastrados com Sucesso! ');
+    alert('Dados cadastrados com sucesso!');
     
     }
 
