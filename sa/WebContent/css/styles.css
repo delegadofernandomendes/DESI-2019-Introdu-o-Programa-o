@@ -3,9 +3,9 @@ form {
 margin: 0 auto;
 width: 400px;
 /* Para ver as bordas do formul�rio */
-padding: 1em;
-border: 1px solid #CCC;
-border-radius: 1em;
+padding: 2em;
+border: 2px solid #1c1c1c;
+border-radius: 3em;
 }
 
 form div + div {
@@ -56,6 +56,9 @@ margin-left: .5em;
 .div-button {
 /* Para posicionar os bot�es para a mesma posi��o dos campos de texto */
 padding-left: 85px; /* mesmo tamanho que os elementos do tipo label */
+text-align: center;
+margin-top: 20px;
+margin-bottom: 15px;
 }
 
 H1 { text-align: center }
@@ -66,7 +69,7 @@ H1 { text-align: center }
 body {
     margin: 0px;
     padding: 0px;
-    font-family: "MuseoSans", Arial, sans-serif;
+    font-family: "courier, monospace";
     background-color:#c8c8c8;
     
     }

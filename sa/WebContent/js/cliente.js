@@ -1,5 +1,5 @@
 function Cadastro(nome, nascimento, cpf, rg, sexo, endereco, cep, numero,
-complemento, telefone, celular, email) {
+complemento, telefone, celular, email, estado, cidade) {
     this.nome = nome;
     this.nascimento = nascimento;
     this.cpf = cpf;
@@ -12,6 +12,8 @@ complemento, telefone, celular, email) {
     this.telefone = telefone;
     this.celular = celular;
     this.email = email;
+    this.estado = estado;
+    this.cidade = cidade;
 }
     
 function salvarCliente() {
@@ -51,9 +53,15 @@ function salvarCliente() {
     
     input = document.getElementById('email_cliente')
     let email = input.value;
+
+    input = document.getElementById('comboEstado')
+    let estado = input.value;
+
+    input = document.getElementById('comboCidade')
+    let cidade = input.value;
     
     let cliente = new Cadastro (nome, nascimento, cpf, rg, sexo, endereco, cep, numero,
-    complemento, telefone, celular, email);
+    complemento, telefone, celular, email, estado, cidade);
     
     let ListClienteStr = localStorage.getItem('listaCliente');
     let listCliente = [];
@@ -92,7 +100,53 @@ function salvarCliente() {
     
     localStorage.setItem('listaCliente', listClienteStr);
     alert('Dados cadastrados com sucesso!');
-    
+    //A linha abaixo faz com que a página seja recarregada, limpando o formulário.
+    document.location.reload(true);
     }
+
+    function carregarDadosEstado() {
+        // pegar a lista de estados do storage
+        
+        let listaEstadosStr = localStorage.getItem('listaEstado');
+        let listaEstados = [];
+        
+        if (listaEstadosStr != null) {
+            listaEstados = JSON.parse(listaEstadosStr);
+        }
+    
+        let comboEstado = document.getElementById("comboEstado");
+        let option;
+    
+        for (let index = 0; index < listaEstados.length; index++) {
+            option = document.createElement("option");
+            option.text = listaEstados[index].nome;
+            option.value - listaEstados[index].nome;
+            comboEstado.add(option);
+        }  
+    }
+
+    function carregarDadosCidade() {
+        // pegar a lista de cidades do storage
+        
+        let cidadeStr = localStorage.getItem('listaCidade');
+        let listaCidade = [];
+        
+        if (cidadeStr != null) {
+            listaCidade = JSON.parse(cidadeStr);
+        }
+    
+        let comboCidade = document.getElementById("comboCidade");
+        let option;
+    
+        for (let index = 0; index < listaCidade.length; index++) {
+            option = document.createElement("option");
+            option.text = listaCidade[index].nome;
+            option.value = listaCidade[index].nome;
+            comboCidade.add(option);
+        }  
+    }
+
+
+
 
     

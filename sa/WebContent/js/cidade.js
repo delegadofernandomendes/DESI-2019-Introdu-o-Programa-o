@@ -37,12 +37,27 @@ function salvarCidade(){
 	let estado = select.value;
 	
 	let cidade = new Cidade(nome, estado);
+
+	//pega o item do local Storage
+
+	let cidadeStr = localStorage.getItem('listaCidade');
+	listaCidade = [];
+
+	// Verificar se a string no local storage não é null
+
+	if(cidadeStr != null){
+		listaCidade = JSON.parse(cidadeStr);
+	}
+
+	listaCidade.push(cidade)
 	
-	let cidadeStr = JSON.stringify(cidade);
-	localStorage.setItem('Cidade', cidadeStr);
+	let listaCidadeStr = JSON.stringify(listaCidade);
+	localStorage.setItem('listaCidade', listaCidadeStr);
 
 	alert('Cidade salva com sucesso');
+	document.location.reload(true);
 
-	abrirPagina('../index.html');
+	//A linha abaixo seria inserida se quiséssemos fazer com que o sistema retornasse à página do Index após salvar a cidade.
+	//abrirPagina('../index.html');
 
 }

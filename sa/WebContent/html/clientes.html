@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
     </head>
 
-    <body onload="javascript:Cadastro()">
+    <body onload="javascript:Cadastro(); carregarDadosEstado(); carregarDadosCidade()">
         <script src="../js/cliente.js"></script>
         <script src="../js/voltar.js"></script>
         
@@ -14,7 +14,9 @@
                 <div id="busca-logo">
 
                     <div id="logo">
-                        <img src="../img/oi2.png" />
+                        <a href="../index.html">
+                            <img src="../img/oi2.png"/>
+                        </a>
                     </div>
 
                     <div id="busca"></div>
@@ -57,18 +59,32 @@
                 </div>
 
                 <div>
+                        <label for= "numero_cliente"> Numero </label> 
+                        <input type= "text" id="numero_cliente" Placeholder= "Numero" required />
+                    </div>
+
+                <div>
+                        <label for= "complemento_cliente">Complemento</label> 
+                        <input type = "text" id= "complemento_cliente" Placeholder= "Complemento" required />
+                </div>
+
+                <div>
+                        <label for="comboEstado">Estado</label> 
+                        <select id="comboEstado">
+                            <option value="">Selecione</option>
+                        </select>
+                </div>
+
+                <div>
+                        <label for="comboCidade">Cidade</label> 
+                        <select id="comboCidade">
+                            <option value="">Selecione</option>
+                        </select>
+                </div>
+
+                <div>
                     <label for= "cep_cliente"> CEP </label> 
                     <input type= "text" id="cep_cliente" Placeholder= "Seu CEP" required />
-                </div>
-
-                <div>
-                    <label for= "numero_cliente"> Numero </label> 
-                    <input type= "text" id="numero_cliente" Placeholder= "Numero" required />
-                </div>
-
-                <div>
-                    <label for= "complemento_cliente">Complemento</label> 
-                    <input type = "text" id= "complemento_cliente" Placeholder= "Complemento" required />
                 </div>
 
                 <div>
