@@ -35,9 +35,7 @@ var crudClientes = new function() {
     this.mapFields = {
         'endereco' : 'Endereço',
         'cpf': 'CPF',
-		'rg': 'RG',
-		'cep' : 'CEP',
-		'numero' : 'Número'
+        'rg': 'RG'
     };
 
 	// Função de criação da tabela dinâmica do CRUD

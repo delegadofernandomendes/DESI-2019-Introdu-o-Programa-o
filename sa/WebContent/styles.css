@@ -17,7 +17,7 @@
   
    .menu ul li {
     width: 150px;
-    //background: tomato;
+    background: tomato;
     float: right;
    }
   
@@ -100,7 +100,7 @@
      max-height: 200px;
     }
     body{
-        background-image:images1.png;
+        background-image:url();
         background-repeat:no-repeat;
         background-position: 50px 50px;
      }

@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pesquisa</title>
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/crud.css">
+</head>
+
+<body>
+	<script src="../js/pesquisar.js"></script>
+
+
+	<div class="conteiner">
+        <header>
+            <div id="busca-logo">
+
+                <div id="logo">
+                    <a href="../index.html">
+                        <img src="../img/oi2.png"/>
+                    </a>
+                </div>
+
+                <div id="busca"></div>
+             </div>
+    
+        </header>
+
+	<h1>Pesquisa de Clientes</h1>
+<div id="divForm">
+	<form action="javascript:void(0)">
+
+		<div>
+			<label for="cpf_cliente">CPF </label> <input type="text"
+				id="cpf_cliente" name="cpf_cliente" placeholder="Digite o CPF" />
+		</div>
+		<div class="div-button">
+			<input type="submit" onclick="javascript:crudClientes.criarTabelaFiltro();" 
+				value="Pesquisar" />
+				
+		</div>
+		
+	</form>
+</div>
+
+<div id="container"></div>
+
+</body>
+</html>
