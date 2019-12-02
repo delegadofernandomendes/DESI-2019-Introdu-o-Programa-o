@@ -168,7 +168,6 @@ var crudClientes = new function() {
 		var div = document.getElementById('container');
 		div.innerHTML = '';
 		if (temCliente) {
-			alert('Cliente encontrado!');
 			div.appendChild(table); // adicionando a tabela à página.
 			document.getElementById('divForm').style.display = "none"; //ocultando o formulário da página de pesquisa.
 		}else{
